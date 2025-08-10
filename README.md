@@ -1,9 +1,9 @@
 # Hands-On Machine Learning with Scikit-Learn and PyTorch
 
 The goal of this project is to teach you the fundamentals of Machine Learning in
-python. It contains the example code and solutions to the exercises in the first edition of my upcoming O'Reilly book [Hands-on Machine Learning with Scikit-Learn and PyTorch (1st edition)](https://geron.ai/er):
+python. It contains the example code and solutions to the exercises in the first edition of my upcoming O'Reilly book [Hands-on Machine Learning with Scikit-Learn and PyTorch (1st edition)](https://homl.info/er):
 
-<a href="https://geron.ai/er"><img src="https://www.oreilly.com/covers/urn:orm:book:9798341607972/400w/" title="book" width="150" border="0" /></a>
+<a href="https://homl.info/er"><img src="https://www.oreilly.com/covers/urn:orm:book:9798341607972/400w/" title="book" width="150" border="0" /></a>
 
 **Note**: If you are looking for the notebooks for the TensorFlow/Keras version of this book, check out [ageron/handson-ml3](https://github.com/ageron/handson-ml3).
 
