@@ -4,7 +4,7 @@
 
 To install this repository and run the Jupyter notebooks on your machine, you will first need git, which you may already have. Open a terminal and type `git` to check. If you do not have git, you can download it from [git-scm.com](https://git-scm.com/).
 
-Next, clone this repository by opening a terminal and typing the following commands:
+Next, clone this repository by opening a terminal and typing the following commands (on Windows, replace `$HOME` with `%USERPROFILE%`):
 
     cd $HOME  # or any other development directory you prefer
     git clone https://github.com/ageron/handson-mlp.git
@@ -12,23 +12,31 @@ Next, clone this repository by opening a terminal and typing the following comma
 
 If you do not want to install git, you can instead download [main.zip](https://github.com/ageron/handson-mlp/archive/main.zip), unzip it, rename the resulting directory to `handson-mlp` and move it to your development directory.
 
-## Install Anaconda
+## Install Anaconda, Miniconda, or Micromamba
 
-Next, you will need Python 3 and a bunch of Python libraries. The simplest way to install these is to [download and install Anaconda](https://www.anaconda.com/distribution/), which is a great cross-platform Python distribution for scientific computing. It comes bundled with many scientific libraries, including NumPy, Pandas, Matplotlib, Scikit-Learn and many more, so it's quite a large installation. If you prefer a lighter weight Anaconda distribution, you can [install Miniconda](https://docs.conda.io/en/latest/miniconda.html), which contains the bare minimum to run the `conda` packaging tool. You should install the latest version of Anaconda (or Miniconda) available.
+Next, you will need Python 3 and a bunch of Python libraries. The simplest way to install these is to [download and install Anaconda](https://www.anaconda.com/distribution/), which is a great cross-platform Python distribution for scientific computing. It comes bundled with many scientific libraries, including NumPy, Pandas, Matplotlib, Scikit-Learn and many more, so it's quite a large installation.
+
+If you prefer a lightweight Anaconda distribution, you can [install Miniconda](https://docs.conda.io/en/latest/miniconda.html), which contains the bare minimum to run the `conda` packaging tool.
+
+Another great option (and my personal favorite) is [Micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html): it installs `mamba`, a significantly faster drop-in replacement for `conda`. If you choose this option, then replace `conda` with `micromamba` in all the instructions below.
+
+In any case, you should install the latest version of the chosen tool.
 
 During the installation on MacOSX and Linux, you will be asked whether to initialize Anaconda by running `conda init`: you should accept, as it will update your shell script to ensure that `conda` is available whenever you open a terminal. After the installation, you must close your terminal and open a new one for the changes to take effect.
 
 During the installation on Windows, you will be asked whether you want the installer to update the `PATH` environment variable. This is not recommended as it may interfere with other software. Instead, after the installation you should open the Start Menu and launch an Anaconda Shell whenever you want to use Anaconda.
 
-Once Anaconda (or Miniconda) is installed, run the following command to update the `conda` packaging tool to the latest version:
+Once Anaconda or Miniconda is installed, run the following command to update the `conda` packaging tool to the latest version (this is not needed for Micromamba):
 
     conda update -n base -c defaults conda
 
-> **Note**: if you don't like Anaconda for some reason, then you can install Python 3 and use pip to install the required libraries manually (this is not recommended, unless you really know what you are doing). I recommend using Python 3.12, since some libs don't support Python 3.13 yet.
+> **Note**: if you don't like Anaconda for some reason, then you can [install Python 3](https://www.python.org/downloads/) and use `pip` to install the required libraries manually (this is not recommended, unless you really know what you are doing). I recommend using Python 3.12, since some libs don't support Python 3.13 yet. If you choose this route, make sure to install the `certifi` package, or else you will not have the root SSL certificates so SSL connections will fail.
 
 ## Install the GPU Driver and Libraries
 
-If you have a PyTorch-compatible GPU card (NVidia card with Compute Capability ≥ 3.5), and you want PyTorch to use it, then you should download the latest driver for your card from [nvidia.com](https://www.nvidia.com/Download/index.aspx?lang=en-us) and install it. You will also need NVidia's CUDA and cuDNN libraries, but the good news is that they will be installed automatically when you install the `pytorch-cuda` package from Anaconda. However, if you don't use Anaconda, you will have to install them manually. If you hit any roadblock, see PyTorch's [installation instructions](https://pytorch.org/get-started/locally/) for more details.
+If you have a PyTorch-compatible Nvidia GPU (with Compute Capability ≥ 3.5), and you want PyTorch to use it, then you should download the latest driver for your card from [nvidia.com](https://www.nvidia.com/Download/index.aspx?lang=en-us) and install it.
+
+You will also need NVidia's CUDA and cuDNN libraries, but the good news is that they will be installed automatically when you install the `pytorch-cuda` package using `conda` (or `mamba`). However, if you don't use `conda`, you will have to install them manually. If you hit any roadblock, see PyTorch's [installation instructions](https://pytorch.org/get-started/locally/) for more details.
 
 ## Create the `homlp` Environment
 
@@ -48,6 +56,10 @@ You're almost there! You just need to register the `homlp` conda environment to 
 
 And that's it! You can now start Jupyter like this:
 
+    jupyter lab
+
+Or, if you prefer the older and simpler user interface:
+
     jupyter notebook
 
 This should open up your browser, and you should see Jupyter's tree view, with the contents of the current directory. If your browser does not open automatically, visit [localhost:8888](http://localhost:8888/tree). Click on `index.ipynb` to get started.
@@ -59,7 +71,7 @@ When you're done with Jupyter, you can close it by typing Ctrl-C in the Terminal
     cd $HOME # or whatever development directory you chose earlier
     cd handson-mlp
     conda activate homlp
-    jupyter notebook
+    jupyter lab  # or jupyter notebook
 
 ## Update This Project and its Libraries
 
@@ -95,4 +107,4 @@ And recreate the environment:
 Lastly, we reactivate the environment and start Jupyter:
 
     conda activate homlp
-    jupyter notebook
+    jupyter lab  # or jupyter notebook
