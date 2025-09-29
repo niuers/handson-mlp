@@ -11,3 +11,4 @@ checkpoint
 /images
 my_*
 /datasets
+*.secret

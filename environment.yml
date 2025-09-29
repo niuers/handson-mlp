@@ -20,7 +20,9 @@ dependencies:
   - nltk>=3.9 # optionally used in chapter 3, exercise 4
   - numexpr>=2.10 # used in the Pandas tutorial for numerical expressions
   - numpy>=1.26 # Powerful n-dimensional arrays and numerical computing tools
+  - onnx>=1.18 # a portable format for deep learning models
   - pandas>=2.2 # data analysis and manipulation tool
+  - peft>=0.17 # a library for parameter-efficient fine-tuning of LLMs
   - pillow>=11.1 # image manipulation library, (used by matplotlib.image.imread)
   - pip # Python's package-management system
   - py-xgboost>=2.1 # used in chapter 6 for optimized Gradient Boosting
@@ -46,8 +48,4 @@ dependencies:
   - widgetsnbextension>=4.0 # interactive HTML widgets for Jupyter notebooks
   - pip:
       - AutoROM
-      - torch-tb-profiler #~=0.4.3 # profiling plugin for TensorBoard
       - urlextract #~=1.9.0 # optionally used in chapter 3, exercise 4
-      - bitsandbytes #~=0.42.0
-      - hf_xet #~=1.1.3
-      - lap #~=0.5.12
