@@ -2,7 +2,6 @@
 *.bak.*
 /bak
 *.old
-*.pyc
 .DS_Store
 .ipynb_checkpoints/
 .vscode/
@@ -12,3 +11,10 @@ checkpoint
 my_*
 /datasets
 *.secret
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv
