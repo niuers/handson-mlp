@@ -40,7 +40,7 @@ If you get an error when activating the virtual environment in PowerShell, you m
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
-## Step 3, upgrade PyTorch libraries if you have a GPU
+## Step 3, if you have a GPU, upgrade the PyTorch libraries
 If you have a GPU, make sure its driver is properly installed (please see your GPU manufacter's instructions for more details).
 
 Next, you must upgrade the PyTorch libraries for GPU support:
@@ -101,6 +101,7 @@ Then you can install the `box2d-py` package (not `box2d`) from source:
 cd
 cd handson-mlp
 source .venv/bin/activate  # on Windows, replace with same command as in step 2
+uv add swig
 uv add box2d-py
 ```
 
