@@ -3,7 +3,7 @@ name = "handson-mlp"
 version = "1.0.0"
 description = "A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in Python using Scikit-Learn and PyTorch."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.14"
 dependencies = [
     "accelerate",
     # "box2d",
@@ -21,6 +21,7 @@ dependencies = [
     "numexpr",
     "numpy",
     "onnx",
+    "optuna",
     "pandas",
     "peft",
     "pillow",

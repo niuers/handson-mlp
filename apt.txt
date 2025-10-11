@@ -1,8 +1,5 @@
 build-essential
+ca-certificates
 cmake
 curl
-ffmpeg
-git
-graphviz
-imagemagick
 sudo
