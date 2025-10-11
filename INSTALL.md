@@ -17,7 +17,7 @@ You can use another Python package manager if you know what you are doing, but I
 Let's download the `handson-mlp` project into your home directory, install all the required Python libraries into a new virtual environment (venv), and make this environment the default for Jupyter notebooks. Open a terminal and run:
 
 ```shell
-cd $HOME  # goes to your home directory
+cd  # goes to your home directory
 git clone https://github.com/ageron/handson-mlp.git
 cd handson-mlp
 uv sync --frozen  # installs all the required Python libraries
