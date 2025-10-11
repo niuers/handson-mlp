@@ -1,0 +1,8 @@
+build-essential
+cmake
+curl
+ffmpeg
+git
+graphviz
+imagemagick
+sudo
