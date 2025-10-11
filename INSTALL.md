@@ -8,6 +8,8 @@ Other platforms like Kaggle or Binder should work as well.
 
 However, if you really want to run these notebooks on your own machine, then please follow the instructions below.
 
+> NOTE: Alternatively, you can [run these notebooks in a docker container](https://github.com/ageron/handson-mlp/blob/main/docker/README.md).
+
 ## Step 1, ensure you have uv and git
 Make sure you have [uv](https://docs.astral.sh/uv/getting-started/installation) and [git](https://git-scm.com/downloads) installed:
 
@@ -49,12 +51,10 @@ Next, you must upgrade the PyTorch libraries for GPU support:
 cd
 cd handson-mlp
 source .venv/bin/activate  # on Windows, replace with same command as in step 2
+uv pip uninstall torch torchvision torchaudio
 
-# For an Nvidia CUDA GPU
-uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-
-# For an AMD ROCm GPU
-uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm6.0
+# For an Nvidia CUDA 12.9 GPU (for other CUDA platforms, replace cu129 as needed)
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu129
 ```
 
 **NOTE**: If you have a MacBook with MPS support ([Metal Performance Shaders](https://developer.apple.com/documentation/metalperformanceshaders)) then you don't need to upgrade the PyTorch libraries, as the default versions support MPS out of the box.
@@ -137,3 +137,5 @@ uv sync --frozen
 ```
 
 Restart the Jupyter Notebook server (it may not be required, but it's safer).
+
+That's it, have fun!
