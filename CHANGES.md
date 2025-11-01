@@ -7,10 +7,13 @@ I wrote three TensorFlow (TF) editions of this book, published by O'Reilly in 20
 * TensorFlow-specific content was removed, including former Chapter 12 (Custom Models and Training with TensorFlow) and Chapter 13 (Loading and Preprocessing Data with TensorFlow), and former Appendices C (Special Data Structures) and D (TensorFlow Graphs).
 * The new Chapter 10 now introduces PyTorch.
 * I also added three new chapters on transformers (this is by far what required the most work, along with the SSM appendix):
-** Chapter 15 covers transformers for natural language processing, including how to build a chatbot.
-** Chapter 16 presents vision transformers and multimodal transformers.
-** Chapter 17, available online at https://homl.info/, discusses several advanced techniques to speed up and scale up transformers. This includes FlashAttention, mixture of experts (MoE), low-rank adaptation (LoRA), and many more.
-* There are also three new appendices: Appendix B (Mixed Precision and Quantization) explains how to shrink models so they can run faster and fit on smaller devices, Appendix D (Relative Positional Encoding) discusses advanced positional encoding techniques for transformers, and Appendix E presents state-space models (SSMs).
+    * Chapter 15 covers transformers for natural language processing, including how to build a chatbot.
+    * Chapter 16 presents vision transformers and multimodal transformers.
+    * Chapter 17, available online at https://homl.info/, discusses several advanced techniques to speed up and scale up transformers. This includes FlashAttention, mixture of experts (MoE), low-rank adaptation (LoRA), and many more.
+* There are also three new appendices:
+    * Appendix B (Mixed Precision and Quantization) explains how to shrink models so they can run faster and fit on smaller devices.
+    * Appendix D (Relative Positional Encoding) discusses advanced positional encoding techniques for transformers.
+    * Appendix E presents state-space models (SSMs).
 * To make room for the newer content, the chapter on support vector machines (SVMs) was [moved online](https://homl.info) and renamed to Appendix C; the last two appendices are also online at the same URL, and the deployment chapter was partially merged into Chapter 10.
 
 The three editions of the TensorFlow/Keras version of this book are nicknamed homl1, homl2, and homl3. This book, which is the first edition of the PyTorch version, is nicknamed homlp. Try saying that three times in a row.
