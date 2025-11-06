@@ -45,4 +45,5 @@ dependencies = [
     "urlextract",
     "widgetsnbextension",
     "ale-py>=0.11.2",
+    "einops>=0.8.1",
 ]
